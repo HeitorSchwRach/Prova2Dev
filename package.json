@@ -1,0 +1,14 @@
+{
+  "name": "prova2dev",
+  "version": "1.0.0",
+  "description": "Prova de desenvolvimento de sistemas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Heitor Schwinden Rachadel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
