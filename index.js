@@ -26,7 +26,7 @@ class Name{
 }
 
 fs.writeFileSync('logs.txt', adicionarArquivo);
-app.get('/', (req, res) => {
+app.get('/logs.txt', (req, res) => {
     res.send(adicionarArquivo);
 });
 app.listen(porta, () => {
