@@ -26,9 +26,19 @@ class Name{
 }
 
 fs.writeFileSync('logs.txt', adicionarArquivo);
-app.get('/logs.txt', (req, res) => {
+app.get('/logs', (req, res) => {
     res.send(adicionarArquivo);
 });
 app.listen(porta, () => {
     console.log(`Servidor rodando na porta ${porta}`);
+});
+
+app.get('/logs/:id', (req, res) => {
+    const logs = fs.readFileSync('logs.txt', 'utf8');
+    res.send(idUnico);
+    if (err) {
+        console.error("Erro ao ler o arquivo:", err);
+    }else{
+        console.log("Id encontrado:", idUnico);
+    }
 });
