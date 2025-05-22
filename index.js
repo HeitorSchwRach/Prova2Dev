@@ -1,5 +1,10 @@
+const fs = require('fs');
+const express = require('express')
+const app = express()
+const porta = 8000
+
+
 function adicionarArquivo(Name){
-    const fs = require('fs');
     const logs = "logs.txt";
     const data = new Date.parse();
     const idUnico = data.getTime();
@@ -21,4 +26,9 @@ class Name{
 }
 
 fs.writeFileSync('logs.txt', adicionarArquivo);
-
+app.get('/', (req, res) => {
+    res.send(adicionarArquivo);
+});
+app.listen(porta, () => {
+    console.log(`Servidor rodando na porta ${porta}`);
+});
